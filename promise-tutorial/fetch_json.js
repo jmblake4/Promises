@@ -1,9 +1,7 @@
-var q = require('q');
-var http = require('q-io/http')
-var defer = q.defer();
+var qhttp = require('q-io/http');
 
-http.read('http://localhost:1337')
-	.then(JSON.parse)
-	.then(console.log)
-	.then(null,console.log)
-	.done();
+qhttp.read('http://localhost:1337')
+.then(JSON.parse)
+.then(console.log)
+.then(null,console.log)
+.done();
